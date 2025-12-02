@@ -1,6 +1,6 @@
-from ColorClustering_ import ColorClusterAnalyzer, cluster_image_multi_process
+from projects.ColorClustering import ColorClusterAnalyzer, cluster_image_multi_process
 import os
-from utils import proccess_img_folder, clip_img_according_to_transparent
+from projects.utils import proccess_img_folder, clip_img_according_to_transparent
 
 def cluster_image(imgs = [''], img_dir = 'cluster_used', 
                   root_dir = 'color_cluster_results', n = 20, is_folder = False):
