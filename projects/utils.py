@@ -3,8 +3,8 @@ from matplotlib import pyplot as plt
 import numpy as np
 import cv2, os
 from PIL import Image
-from matplotlib.colors import LinearSegmentedColormap
 
+# 核密度估计并绘图
 def kde_estimation(data, output_path='kde_plot.png'):
 
     kde = gaussian_kde(data)
@@ -63,7 +63,7 @@ def stat_transparent(img_path):
         print(i, num)
     return transparent
 
-def merge(imgs_path,output_path):
+def merge(imgs_path, output_path):
     imgs = [cv2.imread(img_path, cv2.IMREAD_UNCHANGED) for img_path in imgs_path]
     merged_img = np.concatenate(imgs, axis=1)
     cv2.imwrite(output_path, merged_img)
