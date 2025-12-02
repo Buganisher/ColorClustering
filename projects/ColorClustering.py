@@ -8,8 +8,8 @@ from tqdm import tqdm
 from multiprocessing import Pool
 from concurrent.futures import ThreadPoolExecutor, wait
 
-from CustomKmeans import KmeansPlusPlus_torch, get_cluster_statistics
-from ColorDifference import ciede2000_torch
+from .CustomKmeans import KmeansPlusPlus_torch, get_cluster_statistics
+from .ColorDifference import ciede2000_torch
 
 # ===========================
 # PyTorch 色彩空间转换函数

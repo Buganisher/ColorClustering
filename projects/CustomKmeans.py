@@ -1,4 +1,3 @@
-import numpy as np
 import torch
 
 class KmeansPlusPlus_torch():
