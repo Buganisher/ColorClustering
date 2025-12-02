@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-debug.sh
+debug_cpu.sh
+debug_gpu.sh
 workdir/
 
