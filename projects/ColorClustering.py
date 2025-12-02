@@ -345,9 +345,11 @@ def cluster_image_multi_process(img_paths, max_workers=2, n=20, output_dir='resu
     # 但在已有上下文里可能报错，根据环境调整。Linux下默认fork。
     # 这里保持默认。
     
-    print(f"Starting processing with {max_workers} workers on {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+    print(f"Starting processing with {max_workers} workers")
     
     pool_args = (n_clusters, output_dir)
+
+    os.makedirs(output_dir, exist_ok=True)
     
     with Pool(processes=max_workers, initializer=init_worker, initargs=pool_args) as pool:
         results = list(tqdm(pool.imap_unordered(work, img_paths), 

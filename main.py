@@ -33,14 +33,13 @@ if __name__ == "__main__":
     
     clipped_folder = 'workdir/riders_clipped'
 
-    img_paths = ['workdir/riders/Unit_FullView_1029002302.png']
-    for img_path in img_paths:
-        clip_img_according_to_transparent(img_path, 
-                                          clipped_folder,
-                                          threshold = 1)
+    # img_paths = ['workdir/riders/Unit_FullView_1029002302.png']
+    # for img_path in img_paths:
+    #     clip_img_according_to_transparent(img_path, 
+    #                                       clipped_folder,
+    #                                       threshold = 1)
     
     img_paths = get_images_path(clipped_folder)
-    # img_paths = ['riders_clipped/Unit_FullView_1059005701.png']
     out = 'workdir/riders_cluster'
     cluster_image_multi_process(img_paths, 
                                max_workers = 8, 
